@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登陆页面</title>
+</head>
+<body>
+{{message}}
+
+<form action="/users/login" method="post">
+  {% for item in form %}
+    <p>
+        {{item.label}} {{item}} {{item.errors[0]}}
+    </p>
+
+    {% endfor %}
+   {{next}}
+        <input type="hidden" name="next" value="{{next}}">
+
+    <input type="submit" value="登录">
+</form>
+</body>
+</html>

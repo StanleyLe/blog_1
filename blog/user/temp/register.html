@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户注册</title>
+</head>
+<body>
+    <!--autocomplete属性用户自动添加表单用户每提交一次,则会记录一次内容, on表示记录, off表示不记录 -->
+<form action="" method="post" novalidate autocomplete="on">
+    {% for item in form %}
+    <p>{{item.label}} {{item}} {{item.errors[0]}}</p>
+    {% endfor %}
+    <input type="submit" value="提交注册">
+
+
+</form>
+</body>
+</html>

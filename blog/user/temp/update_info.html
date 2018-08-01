@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改用户个人信息</title>
+</head>
+<body>
+
+<p>用户名 <input type="text" name="username" id="username" value="{{user.username}}" readonly></p>
+<p>用户年龄 <input type="text" name="age" id="age" value="{{user.age}}" required></p>
+<p>用户性别 <input type="text" name="gender" id="gender" value="{% if user.gender == 1%} 男 {% else %} 女 {%endif%}" required></p>
+<p>用户加入时间 <input type="text" value="{{user.c_time}}" readonly></p>
+<p>用户家乡 <input type="text" name="hometown" id="hometown" value="{% if user.hometown %} {{user.hometown}} {%else%} 待完善 {% endif %}" required></p>
+<p><input type="submit" value="确定修改"></p>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户个人资料</title>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+</head>
+
+<body>
+<p>用户名: {{user.username}}</p>
+<p>用户邮箱: {{user.email}}</p>
+<p>用户性别: {% if user.age == 0 %} 男 {% else %} 女 {% endif %}</p>
+<p>用户年龄: {{user.age | default('待完善')}}</p>
+<p>用户家乡: {% if user.hometown %}{%else%} 待完善 {%endif%}</p>
+<p><a href="/users/update_info">修改个人资料</a></p>
+<a href="{{ url_for('users. index') }}"></a>
+</body>
+</html>
